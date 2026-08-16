@@ -2,11 +2,14 @@
 
 **Independent ROS 2 robotics development project by GVM**
 
+> 🚧 **EARLY PUBLIC PREVIEW — WORK IN PROGRESS**  
+> DIABLO X3-NX is in active development. This preview is intentionally available early so interested people can follow the project while it grows. New documentation, media and verified capabilities will be added progressively.
+
 DIABLO X3-NX extends the Direct Drive Technology DIABLO two-wheel robot platform with a D-Robotics RDK X3 and an NVIDIA Jetson Xavier NX.
 
 The project combines real-hardware robotics, perception, interaction and safety functions in a compact X3-NX architecture.
 
-> Status: Active development. Public documentation will describe only functions that have been verified on the real robot.
+> Public documentation describes only functions that have been verified on the real robot.
 
 ## Project direction
 
@@ -74,7 +77,7 @@ The names above identify technologies and tools used by the project. They do not
 
 ## Current status
 
-DIABLO X3-NX is in active development. Photos, architecture diagrams and short real-robot demonstration videos will be added as the public presentation is prepared.
+DIABLO X3-NX is in active development. This is not a finished product or final release. Photos, architecture diagrams and short real-robot demonstration videos will be added as the project progresses.
 
 ---
 
