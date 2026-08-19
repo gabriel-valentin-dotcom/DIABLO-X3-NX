@@ -7,7 +7,7 @@
 
 DIABLO X3-NX extends the Direct Drive Technology DIABLO two-wheel robot platform with a D-Robotics RDK X3, an NVIDIA Jetson Xavier NX, ROS 2, LiDAR, depth vision, interaction and layered safety logic.
 
-This repository is intended to become the **technical history of the project**: idea, hardware, architecture, user interface, ROS 2 structure, operating modes, verified tests, design decisions, development changes and later real-robot media.
+This repository is intended to become the **technical history of the project**: idea, hardware, architecture, user interface, ROS 2 structure, operating modes, verified tests, design decisions, development changes, reviewed source snapshots and later real-robot media.
 
 **Current principle:** only functions and capabilities that have been verified on the real robot are presented as working features.
 
@@ -19,12 +19,22 @@ This repository is intended to become the **technical history of the project**: 
 - [Safety](docs/SAFETY.md)
 - [Operating modes](docs/modes/)
 - [ROS 2 architecture and topics](docs/ros2/OVERVIEW.md)
+- [ROS 2 source area](ros2/README.md)
 - [Current development status](docs/development/CURRENT_STATUS.md)
 - [Design decisions](docs/development/DESIGN_DECISIONS.md)
 - [Human-AI development workflow](docs/development/HUMAN_AI_WORKFLOW.md)
+- [Validation and release readiness](docs/validation/README.md)
+- [Known limitations](docs/validation/KNOWN_LIMITATIONS.md)
 - [Roadmap](ROADMAP.md)
 - [Changelog](CHANGELOG.md)
+- [Contributing](CONTRIBUTING.md)
 - [First public project preview](docs/PUBLIC_PREVIEW.md)
+
+## Development source
+
+The long-term direction is to publish the real DIABLO X3-NX ROS 2 codebase openly. During active development, reviewed development snapshots may appear under [`ros2/`](ros2/).
+
+These snapshots are intended to show the real architecture and implementation direction while making it clear that `main` is **not yet a stable plug-and-play release**.
 
 ## Current X3 touch UI
 
@@ -35,6 +45,8 @@ More photos, UI images and real-robot demonstration videos will be added progres
 ## Community
 
 Questions, technical discussion, ideas and suggestions are welcome through **GitHub Discussions**. The project is open for observation and discussion while remaining under active development.
+
+External feedback is especially useful as the project moves from isolated verified functions toward repeatable full-system real-world validation.
 
 ---
 
