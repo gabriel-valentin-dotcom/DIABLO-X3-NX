@@ -1,0 +1,41 @@
+# ROS 2 / colcon build output
+build/
+install/
+log/
+.colcon/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Editor / OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local environment / secrets
+.env
+.env.*
+*.key
+*.pem
+*.token
+*.secret
+
+# Local diagnostics and temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# DIABLO private development backups
+*.BACKUP_*
+*.backup
+*.bak
+
+# Runtime logs and captures that should be reviewed before publication
+*.log
+*.pcap
+*.pcapng
