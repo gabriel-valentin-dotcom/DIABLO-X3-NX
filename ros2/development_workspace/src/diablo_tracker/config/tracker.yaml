@@ -1,0 +1,12 @@
+diablo_tracker_node:
+  ros__parameters:
+    port: /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0
+    baud: 115200
+    command: AT+DISTANCE
+    command_interval_sec: 1.5
+    serial_timeout_sec: 0.2
+    response_window_sec: 1.3
+    scale: 0.5
+    offset: 0.0
+    stale_repeat_limit: 2
+    stale_timeout_sec: 3.0

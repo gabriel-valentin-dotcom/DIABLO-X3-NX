@@ -4,11 +4,18 @@ This changelog records meaningful **public project changes**, not every private 
 
 ## 2026-08-19
 
+- Published **NX Development Source Snapshot — Batch 1** from the real `diablo_ws/src` workspace.
+- Recorded the reviewed source archive SHA-256 in the public snapshot manifest.
+- Added complete reviewed ROS 2 packages for `diablo_safety`, `diablo_tracker` and `diablo_nx_bringup`.
+- Added snapshot documentation covering publication boundaries, external dependencies and current license status.
+- Applied limited publication-safety sanitization to private contact and machine-specific identifiers; no synthetic replacement implementation was introduced.
+- Kept upstream DDTRobot interfaces, RealSense ROS and SLLIDAR ROS 2 outside the project-source snapshot.
+- Kept backup/history variants, temporary diagnostics and older prototype material out of the current source batch.
+- Updated the main README and ROS 2 source index to link directly to the real development source.
 - Added a professional ROS 2 source-publication area under `ros2/`.
 - Added a repository `.gitignore` for ROS 2 build output, local backups, runtime captures and common secret-file patterns.
 - Added `CONTRIBUTING.md` with current contribution and status-language guidance.
 - Added a validation section with a real-world test plan, known limitations and future release-readiness criteria.
-- Updated the main README with direct links to source, validation and contribution areas.
 - Kept the repository explicitly marked as active development rather than a stable plug-and-play release.
 
 ## 2026-08-17

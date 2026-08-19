@@ -7,7 +7,7 @@
 
 DIABLO X3-NX extends the Direct Drive Technology DIABLO two-wheel robot platform with a D-Robotics RDK X3, an NVIDIA Jetson Xavier NX, ROS 2, LiDAR, depth vision, interaction and layered safety logic.
 
-This repository is intended to become the **technical history of the project**: idea, hardware, architecture, user interface, ROS 2 structure, operating modes, verified tests, design decisions, development changes, reviewed source snapshots and later real-robot media.
+This repository is intended to become the **technical history of the project**: idea, hardware, architecture, user interface, ROS 2 structure, operating modes, verified tests, design decisions, development changes, real source snapshots and later real-robot media.
 
 **Current principle:** only functions and capabilities that have been verified on the real robot are presented as working features.
 
@@ -20,6 +20,7 @@ This repository is intended to become the **technical history of the project**: 
 - [Operating modes](docs/modes/)
 - [ROS 2 architecture and topics](docs/ros2/OVERVIEW.md)
 - [ROS 2 source area](ros2/README.md)
+- [Real NX development source snapshot](ros2/development_workspace/README.md)
 - [Current development status](docs/development/CURRENT_STATUS.md)
 - [Design decisions](docs/development/DESIGN_DECISIONS.md)
 - [Human-AI development workflow](docs/development/HUMAN_AI_WORKFLOW.md)
@@ -32,9 +33,11 @@ This repository is intended to become the **technical history of the project**: 
 
 ## Development source
 
-The long-term direction is to publish the real DIABLO X3-NX ROS 2 codebase openly. During active development, reviewed development snapshots may appear under [`ros2/`](ros2/).
+Real code from the active NX `diablo_ws/src` workspace is now being published progressively under [`ros2/development_workspace/`](ros2/development_workspace/).
 
-These snapshots are intended to show the real architecture and implementation direction while making it clear that `main` is **not yet a stable plug-and-play release**.
+The first source batch contains complete project-specific ROS 2 packages for NX bringup, safety and UWB/tracker integration. Additional active packages will follow after publication review.
+
+The public source is intended to show the **real architecture and implementation direction** while making it clear that `main` is not yet a stable plug-and-play release.
 
 ## Current X3 touch UI
 
