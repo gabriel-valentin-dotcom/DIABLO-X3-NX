@@ -4,6 +4,8 @@
 
 **Independent real-hardware ROS 2 robotics development project by GVM**
 
+![DIABLO X3-NX System Architecture](media/images/architecture/diablo_x3_nx_system_architecture.png)
+
 > 🚧 **EARLY PUBLIC PREVIEW — WORK IN PROGRESS**  
 > DIABLO X3-NX is intentionally documented while it is being developed. Architecture, interfaces, operating modes and implementation details may change as the real robot evolves.
 
