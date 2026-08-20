@@ -1,5 +1,7 @@
 # DIABLO X3-NX
 
+❤️ **Support the development of DIABLO X3-NX:** [Support the project](https://paypal.me/GVM106110)
+
 **Independent real-hardware ROS 2 robotics development project by GVM**
 
 > 🚧 **EARLY PUBLIC PREVIEW — WORK IN PROGRESS**  
@@ -47,7 +49,7 @@ More photos, UI images and real-robot demonstration videos will be added progres
 
 ## Support the project
 
-DIABLO X3-NX is an independent real-hardware development project. GitHub Sponsors is the preferred project-support channel.
+DIABLO X3-NX is an independent real-hardware development project. The current public support option is [PayPal.Me](https://paypal.me/GVM106110). GitHub Sponsors may be added later as an additional channel.
 
 Support can help fund development hardware, sensors, electronics, battery prototypes, test equipment and continued public documentation. Sponsorship does not change the project's technical verification or safety standards.
 
