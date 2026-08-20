@@ -45,6 +45,12 @@ The first current UI presentation image is available in [`media/images/ui/`](med
 
 More photos, UI images and real-robot demonstration videos will be added progressively when time allows.
 
+## Support the project
+
+DIABLO X3-NX is an independent real-hardware development project. GitHub Sponsors is the preferred project-support channel.
+
+Support can help fund development hardware, sensors, electronics, battery prototypes, test equipment and continued public documentation. Sponsorship does not change the project's technical verification or safety standards.
+
 ## Community
 
 Questions, technical discussion, ideas and suggestions are welcome through **GitHub Discussions**. The project is open for observation and discussion while remaining under active development.
