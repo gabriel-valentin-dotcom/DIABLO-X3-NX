@@ -6,6 +6,12 @@
 
 ![DIABLO X3-NX System Architecture](media/images/architecture/diablo_x3_nx_system_architecture.png)
 
+## Real robot demo
+
+▶️ **[DIABLO X3-NX — INTERACT Voice Command Test | Real Robot (16:9)](https://www.youtube.com/watch?v=Lmo3uwQTuLg)**
+
+Real-hardware INTERACT test showing voice-command interaction with the physical DIABLO robot during active development. The published presentation uses replacement audio for privacy; the robot reactions shown come from the original real-hardware test.
+
 > 🚧 **EARLY PUBLIC PREVIEW — WORK IN PROGRESS**  
 > DIABLO X3-NX is intentionally documented while it is being developed. Architecture, interfaces, operating modes and implementation details may change as the real robot evolves.
 
