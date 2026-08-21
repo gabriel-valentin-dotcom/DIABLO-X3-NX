@@ -21,6 +21,12 @@ This repository is intended to become the **technical history of the project**: 
 
 **Current principle:** only functions and capabilities that have been verified on the real robot are presented as working features.
 
+## How the DIABLO project started
+
+The story began with the arrival of the original DIABLO robot: first the shipping package, then the transport case, the robot itself, and its identification plate. From that starting point, DIABLO X3-NX grew into the current real-hardware ROS 2 development project.
+
+![How the DIABLO project started](media/images/project-history/how_the_diablo_project_started.jpg)
+
 ## Explore the project
 
 - [Project overview](docs/PROJECT_OVERVIEW.md)
