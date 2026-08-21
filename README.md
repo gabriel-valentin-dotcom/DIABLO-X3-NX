@@ -8,7 +8,11 @@
 
 ## Real robot demo
 
-▶️ **[Watch on YouTube — DIABLO X3-NX INTERACT Demo (16:9)](https://www.youtube.com/watch?v=Lmo3uwQTuLg)**
+▶️ **[NEW — DIABLO X3-NX — INTERACT Voice Command Test | Real Robot](https://www.youtube.com/watch?v=1tYXHSDjvRE)**
+
+Real-hardware test of DIABLO's INTERACT voice-command path on the physical X3-NX robot during active development.
+
+▶️ **[Previous demo — DIABLO X3-NX INTERACT Demo (16:9)](https://www.youtube.com/watch?v=Lmo3uwQTuLg)**
 
 Real-hardware INTERACT test showing voice-command interaction with the physical DIABLO robot during active development. The published presentation uses replacement audio for privacy; the robot reactions shown come from the original real-hardware test.
 
