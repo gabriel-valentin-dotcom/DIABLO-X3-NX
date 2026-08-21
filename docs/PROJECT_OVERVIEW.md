@@ -1,7 +1,7 @@
 # Project Overview
 
 > **Status:** WORK IN PROGRESS  
-> **Last updated:** 17 August 2026
+> **Last updated:** 21 August 2026
 
 DIABLO X3-NX is an independent robotics development project focused on turning a compact two-wheel robot platform into a practical, observable and extensible real-hardware system.
 
@@ -21,6 +21,8 @@ The project combines robot-side control, higher-level compute, perception, safet
 This repository is intentionally being built while development continues. Some interfaces, parameters and implementation details will change over time.
 
 The goal is not to present DIABLO as a finished product. The goal is to make the **idea, technical direction, current state and development history understandable**.
+
+The documented origin of the project is maintained separately in [Project History](PROJECT_HISTORY.md), including the original delivery, transport case, robot platform and identification plate.
 
 ## Main technical areas
 
