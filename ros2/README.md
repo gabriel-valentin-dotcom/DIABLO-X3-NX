@@ -6,17 +6,36 @@
 >
 > The codebase is still evolving. Files published here may change as the robot is tested, diagnosed and extended.
 
+## New here?
+
+**Start with [`START_HERE.md`](START_HERE.md).** It gives a short technical tour and links directly to the most interesting source files already public.
+
 ## Real development source
 
-The first larger real NX source publication is now available at:
+The first larger real NX source publication is available at:
 
 **[`development_workspace/`](development_workspace/)**
 
 Snapshot date: **2026-08-19**
 
-Batch 1 publishes complete reviewed packages for NX bringup, safety and UWB/tracker integration. Larger active packages for camera/perception, FOLLOW/AUTO, mode management and INTERACT/voice will be added in subsequent reviewed source batches.
+Batch 1 publishes complete reviewed packages for NX bringup, safety and UWB/tracker integration. Larger active packages for camera/perception, FOLLOW/AUTO, mode management and INTERACT/voice are planned as subsequent reviewed source batches.
 
 The source comes from the real `diablo_ws/src` workspace. It is not reconstructed example code. Limited publication-safety edits are documented in the snapshot manifest.
+
+### Direct source entry points
+
+- [`diablo_safety`](development_workspace/src/diablo_safety/) — RealSense safety and an early system-state node
+- [`diablo_tracker`](development_workspace/src/diablo_tracker/) — experimental UWB serial tracker/distance integration
+- [`diablo_nx_bringup`](development_workspace/src/diablo_nx_bringup/) — historical NX bringup structure
+- [`SOURCE_PUBLICATION_ROADMAP.md`](development_workspace/SOURCE_PUBLICATION_ROADMAP.md) — what is intended to be reviewed for the next real source batches
+
+## Related ROS 2 documentation
+
+- [`../docs/ros2/NODES_AND_SERVICES.md`](../docs/ros2/NODES_AND_SERVICES.md)
+- [`../docs/ros2/SAFETY_AND_MOTION_FLOW.md`](../docs/ros2/SAFETY_AND_MOTION_FLOW.md)
+- [`../docs/ros2/TOPICS.md`](../docs/ros2/TOPICS.md)
+- [`../docs/ros2/PACKAGE_STATUS.md`](../docs/ros2/PACKAGE_STATUS.md)
+- [`../docs/ros2/WORKSPACE_STRUCTURE.md`](../docs/ros2/WORKSPACE_STRUCTURE.md)
 
 ## Examples
 
@@ -31,7 +50,7 @@ DIABLO X3-NX is a real multi-computer ROS 2 system. Development snapshots are pu
 - interaction between X3 and Jetson NX
 - safety and permission logic
 - mode implementation direction
-- current engineering state
+- current technical development state
 
 They should **not** be interpreted as finished plug-and-play releases.
 
