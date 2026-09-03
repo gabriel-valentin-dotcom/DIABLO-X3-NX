@@ -111,9 +111,12 @@ The next DIABLO battery generation is based on:
 - 7000 mAh cells
 - 24 cells per battery pack
 - Two identical removable battery packs planned
-- JBD DB24SA03 Smart BMS
+- 52 cells available in total: 48 for two packs + 4 reserve cells
+- 2 × JBD DB24SA03 Smart BMS
 - 60 A BMS version
 - Bluetooth + UART monitoring
+
+![DIABLO Battery V2 — components ready for the build](../media/images/battery/diablo_battery_v2_build_begins.jpg)
 
 The mechanical battery design must remain inside the available DIABLO battery space.
 
