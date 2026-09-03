@@ -28,9 +28,11 @@ This repository is intended to become the **technical history of the project**: 
 - [Hardware](docs/HARDWARE.md)
 - [Safety](docs/SAFETY.md)
 - [Operating modes](docs/modes/)
+- [ROS 2 — start here](ros2/START_HERE.md)
 - [ROS 2 architecture and topics](docs/ros2/OVERVIEW.md)
 - [ROS 2 source area](ros2/README.md)
 - [Real NX development source snapshot](ros2/development_workspace/README.md)
+- [Real source publication roadmap](ros2/development_workspace/SOURCE_PUBLICATION_ROADMAP.md)
 - [Current development status](docs/development/CURRENT_STATUS.md)
 - [Design decisions](docs/development/DESIGN_DECISIONS.md)
 - [Human-AI development workflow](docs/development/HUMAN_AI_WORKFLOW.md)
@@ -43,9 +45,11 @@ This repository is intended to become the **technical history of the project**: 
 
 ## Development source
 
-Real code from the active NX `diablo_ws/src` workspace is now being published progressively under [`ros2/development_workspace/`](ros2/development_workspace/).
+Real code from the active NX `diablo_ws/src` workspace is being published progressively under [`ros2/development_workspace/`](ros2/development_workspace/).
 
-The first source batch contains complete project-specific ROS 2 packages for NX bringup, safety and UWB/tracker integration. Additional active packages will follow after publication review.
+The first source batch contains complete project-specific ROS 2 packages for NX bringup, safety and UWB/tracker integration. New package-level guides now link visitors directly to the most useful source files, and [`ros2/START_HERE.md`](ros2/START_HERE.md) provides a short technical tour.
+
+The next high-priority reviewed source areas are camera/perception/FOLLOW, mode management/AUTO and INTERACT/voice. The repository will only publish those areas from real reviewed workspace files rather than replacing missing source with simplified synthetic versions.
 
 The public source is intended to show the **real architecture and implementation direction** while making it clear that `main` is not yet a stable plug-and-play release.
 
