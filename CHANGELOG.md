@@ -2,6 +2,18 @@
 
 This changelog records meaningful **public project changes**, not every private diagnostic action.
 
+## 2026-09-03
+
+- Published the current **DIABLO X3-NX — INTERACT Voice Command Test | Real Robot** video and linked it from the repository documentation.
+- Updated the public current-status, INTERACT, SHOW and known-limitations pages to reflect the latest real-hardware development state.
+- Established a working controller telemetry/DDS baseline from X3 UART/OSDK through ROS 2 and cross-host `Body_state` delivery; the current X3 runtime uses an explicit Fast DDS UDPv4 transport profile.
+- Corrected controller-authority first-command handling so the first valid command after authority reacquisition is preserved instead of being discarded.
+- Removed a recurring generic idle HOLD repetition while retaining explicit STOP, LiDAR, bubble, stall and custom safety-abort behavior.
+- Added an INTERACT-off voice-pose gate so stale/late voice pose and short-motion requests cannot continue after INTERACT is disabled, while STOP remains available.
+- Added internal start/runtime safety gates to Custom Moonwalker V1 for fresh body state, standing mode, controller authority and zero error/warning state.
+- Verified recovery of the LiDAR manager `LIDAR_READY` heartbeat with a targeted manager-service restart while `/scan` and LiDAR safety remained active.
+- Performed the first live Custom Moonwalker trigger attempt. The request reached the NX mode-manager and motion-request path, but the X3 custom controller was not confirmed active before timeout; the choreography therefore remains **not yet physically validated**.
+
 ## 2026-08-19
 
 - Published **NX Development Source Snapshot — Batch 1** from the real `diablo_ws/src` workspace.
