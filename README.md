@@ -69,7 +69,7 @@ External feedback is especially useful as the project moves from isolated verifi
 
 ---
 
-**Project creator & engineering:** GVM  
+**Project creator:** GVM  
 **AI-assisted development:** ChatGPT and Codex by OpenAI
 
 Technology names identify tools and platforms used by the project and do not imply sponsorship, endorsement or partnership.
