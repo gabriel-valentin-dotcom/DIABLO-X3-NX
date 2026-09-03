@@ -17,6 +17,8 @@ The archive hash records the private source snapshot used as the basis for publi
 
 Batch 1 contains **20 source/package files** across these three reviewed ROS 2 packages.
 
+The package-level `README.md` files and source-navigation documents added later in the public repository are explanatory GitHub documentation. They are **not counted as original files from the 2026-08-19 source archive** and do not alter the archived source snapshot.
+
 ## Excluded from Batch 1
 
 The following categories were deliberately kept out of this first publication batch:
