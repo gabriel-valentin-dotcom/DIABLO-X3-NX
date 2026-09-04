@@ -4,7 +4,7 @@
 
 This section documents selected ROS 2 interfaces and architecture used by DIABLO X3-NX.
 
-Reviewed source from the real NX `diablo_ws/src` workspace is now published progressively under [`../../ros2/development_workspace/`](../../ros2/development_workspace/). New visitors can use [`../../ros2/START_HERE.md`](../../ros2/START_HERE.md) for a short source-oriented technical tour.
+Reviewed source from the real NX `diablo_ws/src` workspace is published progressively under [`../../ros2/development_workspace/`](../../ros2/development_workspace/). New visitors can use [`../../ros2/START_HERE.md`](../../ros2/START_HERE.md) for a short source-oriented technical tour.
 
 ## Main ROS 2 areas
 
@@ -17,11 +17,21 @@ Reviewed source from the real NX `diablo_ws/src` workspace is now published prog
 - On-demand interaction
 - X3 ↔ Jetson NX communication
 
+## Runtime graph snapshot — 2026-09-04
+
+The following graph is a real ROS 2 runtime connectivity snapshot from the DIABLO X3-NX development system. It shows the dense relationships between nodes and topics across the active stack.
+
+[![DIABLO X3-NX ROS 2 runtime graph](graphs/rosgraph_2026-09-04.svg)](graphs/rosgraph_2026-09-04.svg)
+
+Open the SVG directly for a larger, zoomable view.
+
 ## Public source status
 
-The first reviewed source batch contains real NX packages for bringup, safety and experimental UWB/tracker integration.
+The repository now contains the original reviewed foundation snapshot plus a selected current integration snapshot covering important Camera/Perception, FOLLOW, AUTO, runtime/mode ownership and INTERACT components.
 
-Larger connected areas such as camera/perception/FOLLOW, mode management/AUTO and INTERACT/voice are documented here but are not all present yet as public source. They are tracked in the [`source publication roadmap`](../../ros2/development_workspace/SOURCE_PUBLICATION_ROADMAP.md).
+The current integration-source review is documented in [`../../ros2/development_workspace/CURRENT_SOURCE_2026-09-04.md`](../../ros2/development_workspace/CURRENT_SOURCE_2026-09-04.md).
+
+Larger source expansion can wait until DIABLO reaches a later stable in-use state and a formal release is prepared.
 
 ## Important note
 
