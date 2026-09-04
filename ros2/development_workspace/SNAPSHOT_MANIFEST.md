@@ -1,5 +1,7 @@
 # Snapshot Manifest
 
+> This manifest records the **historical 2026-08-19 Batch 1 source snapshot**. A later current integration selection is documented separately in [`CURRENT_SOURCE_2026-09-04.md`](CURRENT_SOURCE_2026-09-04.md).
+
 ## Source archive
 
 - Date: **2026-08-19**
@@ -19,6 +21,12 @@ Batch 1 contains **20 source/package files** across these three reviewed ROS 2 p
 
 The package-level `README.md` files and source-navigation documents added later in the public repository are explanatory GitHub documentation. They are **not counted as original files from the 2026-08-19 source archive** and do not alter the archived source snapshot.
 
+## Later current integration source
+
+The 2026-08-19 snapshot is intentionally preserved as development history. It has not been silently rewritten to match the later robot workspace.
+
+A second review from the current NX `diablo_ws/src` workspace was published on **2026-09-04** with selected Camera/perception, FOLLOW manager, AUTO, safety and INTERACT/runtime source. Its archive hash, included files and publication boundaries are recorded in [`CURRENT_SOURCE_2026-09-04.md`](CURRENT_SOURCE_2026-09-04.md).
+
 ## Excluded from Batch 1
 
 The following categories were deliberately kept out of this first publication batch:
@@ -29,7 +37,7 @@ The following categories were deliberately kept out of this first publication ba
 - temporary diagnostics and generated runtime material
 - generic test boilerplate not needed to understand this batch
 - older personal/prototype interaction material
-- larger active DIABLO packages still queued for the next review batches
+- larger active DIABLO packages not part of the original Batch 1 review
 
 ## Publication-safety edits
 
