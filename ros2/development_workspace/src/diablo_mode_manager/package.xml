@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>diablo_mode_manager</name>
+  <version>0.0.1</version>
+  <description>Diablo central mode manager</description>
+  <maintainer email="opensource@invalid.example">GVM</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
