@@ -31,7 +31,8 @@ This repository is intended to become the **technical history of the project**: 
 - [ROS 2 — start here](ros2/START_HERE.md)
 - [ROS 2 architecture and topics](docs/ros2/OVERVIEW.md)
 - [ROS 2 source area](ros2/README.md)
-- [Real NX development source snapshot](ros2/development_workspace/README.md)
+- [Real NX development source](ros2/development_workspace/README.md)
+- [Current integration source — 2026-09-04](ros2/development_workspace/CURRENT_SOURCE_2026-09-04.md)
 - [Real source publication roadmap](ros2/development_workspace/SOURCE_PUBLICATION_ROADMAP.md)
 - [Current development status](docs/development/CURRENT_STATUS.md)
 - [Design decisions](docs/development/DESIGN_DECISIONS.md)
@@ -45,11 +46,15 @@ This repository is intended to become the **technical history of the project**: 
 
 ## Development source
 
-Real code from the active NX `diablo_ws/src` workspace is being published progressively under [`ros2/development_workspace/`](ros2/development_workspace/).
+Real code from the NX `diablo_ws/src` workspace is published under [`ros2/development_workspace/`](ros2/development_workspace/).
 
-The first source batch contains complete project-specific ROS 2 packages for NX bringup, safety and UWB/tracker integration. New package-level guides now link visitors directly to the most useful source files, and [`ros2/START_HERE.md`](ros2/START_HERE.md) provides a short technical tour.
+The first reviewed snapshot from **2026-08-19** contains project-specific ROS 2 packages for NX bringup, safety and UWB/tracker integration.
 
-The next high-priority reviewed source areas are camera/perception/FOLLOW, mode management/AUTO and INTERACT/voice. The repository will only publish those areas from real reviewed workspace files rather than replacing missing source with simplified synthetic versions.
+A newer reviewed integration selection from **2026-09-04** now adds real current source for important Camera/perception, FOLLOW manager, AUTO supervisor, LiDAR/safety, INTERACT command and on-demand voice-runtime components. See [`CURRENT_SOURCE_2026-09-04.md`](ros2/development_workspace/CURRENT_SOURCE_2026-09-04.md) for the exact publication boundary and archive hash.
+
+This is a selected development-source publication, not a complete mirror of the live workspace. Larger current implementations such as the complete FOLLOW action logic and central mode manager remain outside this public selection rather than being replaced with simplified or synthetic code.
+
+After this integration-source publication, the next **large source expansion is intentionally paused** while DIABLO continues toward stable real-world use. A future stable release will be prepared separately with stronger deployment, licensing and repeatable validation documentation.
 
 The public source is intended to show the **real architecture and implementation direction** while making it clear that `main` is not yet a stable plug-and-play release.
 
