@@ -1,59 +1,71 @@
-# DIABLO X3-NX — Real NX Development Source Snapshot
+# DIABLO X3-NX — Real NX Development Source
 
 > 🚧 **WORK IN PROGRESS — ACTIVE ROBOT DEVELOPMENT**
 >
-> This directory contains selected **real source code from the active DIABLO X3-NX ROS 2 workspace**.
->
-> The code is published while the robot is still being developed and tested. Interfaces, parameters, package structure and implementation details may change.
+> This directory contains selected **real source code from the DIABLO X3-NX ROS 2 workspace**. It intentionally preserves development history while also exposing a newer reviewed integration selection.
 
-## Snapshot
+The code is published while the robot is still being developed and tested. Interfaces, parameters, package structure and implementation details may change.
 
-- Source system: NVIDIA Jetson Xavier NX development workspace
-- Internal workspace: `diablo_ws/src`
-- Snapshot date: **2026-08-19**
-- Publication stage: **Batch 1 — foundation / safety / tracking**
-- Runtime status: **ACTIVE DEVELOPMENT**
+## Public source snapshots
 
-This is not reconstructed example code. It comes from the real development workspace used for DIABLO X3-NX. Only publication-safety edits were applied where necessary, such as replacing private maintainer contact data and machine-specific deployment identifiers.
+### Batch 1 — 2026-08-19
 
-## Published in Batch 1
-
-The first source batch contains complete reviewed ROS 2 packages for:
+The first reviewed publication contains real NX packages for:
 
 - [`diablo_safety`](src/diablo_safety/) — RealSense-based safety state and system-state logic
 - [`diablo_tracker`](src/diablo_tracker/) — experimental UWB distance/tracker integration
 - [`diablo_nx_bringup`](src/diablo_nx_bringup/) — NX ROS 2 bringup structure
 
-Each package now has a short public navigation README to explain what is worth opening first and where the historical snapshot differs from current runtime documentation.
+Historical manifest: [`SNAPSHOT_MANIFEST.md`](SNAPSHOT_MANIFEST.md).
 
-## Good files to inspect first
+### Current integration source — 2026-09-04
 
-- [`realsense_safety_node.py`](src/diablo_safety/diablo_safety/realsense_safety_node.py)
-- [`diablo_system_state_node.py`](src/diablo_safety/diablo_safety/diablo_system_state_node.py)
-- [`tracker_node.py`](src/diablo_tracker/diablo_tracker/tracker_node.py)
-- [`diablo_nx_base.launch.py`](src/diablo_nx_bringup/launch/diablo_nx_base.launch.py)
+A newer real NX `diablo_ws/src` archive was reviewed and a selected current source set was added for:
+
+- [`diablo_camera`](src/diablo_camera/) — Camera, perception, FOLLOW manager, AUTO supervision and safety-related runtime components
+- [`diablo_mode_manager`](src/diablo_mode_manager/) — selected current runtime ownership / INTERACT management
+- [`diablo_voice_command`](src/diablo_voice_command/) — selected current INTERACT command handling
+
+Full review record, source-archive hash, publication boundaries and sanitization notes:
+
+**[`CURRENT_SOURCE_2026-09-04.md`](CURRENT_SOURCE_2026-09-04.md)**
+
+## Good current files to inspect first
+
+- [`vision_track_node.py`](src/diablo_camera/diablo_camera/vision_track_node.py)
+- [`camera_manager_node.py`](src/diablo_camera/diablo_camera/camera_manager_node.py)
+- [`follow_manager_node.py`](src/diablo_camera/diablo_camera/follow_manager_node.py)
+- [`auto_supervisor_node.py`](src/diablo_camera/diablo_camera/auto_supervisor_node.py)
+- [`lidar_safety_node.py`](src/diablo_camera/diablo_camera/lidar_safety_node.py)
+- [`motor_stall_protect_node.py`](src/diablo_camera/diablo_camera/motor_stall_protect_node.py)
+- [`voice_command_node.py`](src/diablo_voice_command/diablo_voice_command/voice_command_node.py)
+- [`voice_runtime_manager_node.py`](src/diablo_mode_manager/diablo_mode_manager/voice_runtime_manager_node.py)
 
 For a short project-wide tour, see [`../START_HERE.md`](../START_HERE.md).
 
-## Next real source batches
+## Important boundary
+
+This directory is **not a complete mirror of the live workspace**. The 2026-09-04 archive also contains larger current project files that remain outside this selected publication, including the full FOLLOW action implementation, central mode manager, safe voice pose and voice input.
+
+Upstream/vendor repositories, nested Git history, backups, generated files and private deployment details are deliberately not copied into this public tree.
+
+The repository does not substitute simplified or synthetic implementations for files that are not published.
+
+## Publication direction
 
 See [`SOURCE_PUBLICATION_ROADMAP.md`](SOURCE_PUBLICATION_ROADMAP.md).
 
-The highest-priority future source areas are camera/perception/FOLLOW, mode management/AUTO and INTERACT/voice. They will only be published from real reviewed workspace files; the repository will not substitute synthetic implementations just to make the tree look complete.
+After the 2026-09-04 integration-source selection, the next **large source expansion is intentionally paused** while DIABLO continues toward stable real-world use. A future stable release can then be prepared separately with a stronger licensing, deployment and validation pass.
 
-## Why batches?
+## What this source is not
 
-DIABLO X3-NX is a connected multi-package system. The goal is to publish the real codebase progressively while keeping each public change reviewable and understandable.
+This is **not yet a stable plug-and-play release**. Running DIABLO requires the corresponding robot-side X3 software, external ROS 2 dependencies, hardware, models, runtime services and configuration that are not all represented here.
 
-## What this snapshot is not
-
-This is **not yet a stable plug-and-play release**. Running DIABLO requires the corresponding robot-side X3 software, external ROS 2 dependencies, hardware, models, runtime services and configuration that are not all part of this first batch.
-
-A snapshot is also not silently rewritten to match a newer runtime. Historical names and interfaces can remain in snapshot source while current architecture/status is documented separately.
+A historical snapshot is also not silently rewritten to match a newer runtime. Historical names and interfaces can remain in old snapshot source while current architecture/status is documented separately.
 
 ## Publication review
 
-Before publication, the source snapshot is checked for:
+Before publication, source is checked for:
 
 - credentials and secrets
 - private contact and network information
@@ -62,7 +74,7 @@ Before publication, the source snapshot is checked for:
 - third-party/vendor source that should remain upstream
 - license and attribution boundaries
 
-See [DEPENDENCIES.md](DEPENDENCIES.md), [SNAPSHOT_MANIFEST.md](SNAPSHOT_MANIFEST.md) and [LICENSE_STATUS.md](LICENSE_STATUS.md).
+See [DEPENDENCIES.md](DEPENDENCIES.md), [SNAPSHOT_MANIFEST.md](SNAPSHOT_MANIFEST.md), [CURRENT_SOURCE_2026-09-04.md](CURRENT_SOURCE_2026-09-04.md) and [LICENSE_STATUS.md](LICENSE_STATUS.md).
 
 ## Status language
 
