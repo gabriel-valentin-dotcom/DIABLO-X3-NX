@@ -8,9 +8,9 @@
 
 ## Real robot videos
 
-▶️ **[DIABLO X3-NX — YouTube channel](https://www.youtube.com/@gabriel-valentin6684)**
+▶️ **[DIABLO X3-NX — Real Robot Tests](https://www.youtube.com/playlist?list=PLQqXKIBIRavc)**
 
-Real-hardware development videos, tests and future DIABLO demonstrations will be published on this channel.
+Real-hardware development videos, tests and future DIABLO demonstrations are collected in this playlist.
 
 > 🚧 **EARLY PUBLIC PREVIEW — WORK IN PROGRESS**  
 > DIABLO X3-NX is intentionally documented while it is being developed. Architecture, interfaces, operating modes and implementation details may change as the real robot evolves.
