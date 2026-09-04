@@ -8,7 +8,9 @@
 
 ## Real robot videos
 
-▶️ **[DIABLO X3-NX — Real Robot Tests](https://www.youtube.com/playlist?list=PLQqXKIBIRavc)**
+DIABLO's real-robot video documentation is published on **YouTube**.
+
+▶️ **[Watch the DIABLO X3-NX — Real Robot Tests playlist on YouTube](https://www.youtube.com/playlist?list=PLQqXKIBIRavc)**
 
 Real-hardware development videos, tests and future DIABLO demonstrations are collected in this playlist.
 
