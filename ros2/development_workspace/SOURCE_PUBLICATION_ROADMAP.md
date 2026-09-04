@@ -2,7 +2,7 @@
 
 > 🚧 **ACTIVE DEVELOPMENT / PUBLICATION ROADMAP**
 >
-> This page describes which parts of the real DIABLO X3-NX `diablo_ws` are already represented in the public source snapshot and which connected areas are intended for later reviewed source batches.
+> DIABLO X3-NX intentionally publishes real development snapshots while keeping a clear boundary between public source history and a future stable release.
 
 ## Published — Batch 1
 
@@ -23,47 +23,70 @@ Already public under [`src/`](src/):
 
 These files come from the real NX development workspace. They are not reconstructed examples.
 
-## High-priority next source areas
+## Published — current integration source
 
-The following areas are especially important because they show how the robot moves from perception and user intent toward controlled physical behavior.
+Review/publication date: **2026-09-04**
 
-### Batch 2 — Camera / perception / FOLLOW
+A newer NX `diablo_ws/src` archive was reviewed and a selected current integration set was added. See [`CURRENT_SOURCE_2026-09-04.md`](CURRENT_SOURCE_2026-09-04.md) for the archive hash, publication boundaries and sanitization record.
 
-Planned publication focus:
+### Camera / perception
 
-- current camera-management source
-- RealSense preview/perception nodes used by the project
-- FOLLOW manager logic
-- FOLLOW action/decision logic
-- package metadata and relevant configuration
+Now public:
 
-Why this matters: FOLLOW is one of the strongest examples of the project combining target information, depth, LiDAR/safety state, permission and controlled motion requests. Physical forward/left/right FOLLOW behavior has been demonstrated on the real robot, while tuning and integration continue.
+- camera command and runtime management
+- RealSense preview / CUDA-YOLO integration
+- vision target and depth/floor processing
+- LiDAR safety integration
+- safety-bubble processing
+- motor-stall protection
 
-### Batch 3 — Mode management / AUTO
+### FOLLOW
 
-Planned publication focus:
+Now public:
 
-- mode-manager source
-- AUTO supervisor source
-- enable/permission state handling
-- configuration needed to understand how operating modes are coordinated
+- current `follow_manager_node.py`
+- FOLLOW arm/start/dependency ownership and readiness logic
 
-Why this matters: DIABLO X3-NX is not a collection of unrelated ROS nodes. Mode ownership and permission are used to prevent multiple higher-level behaviors from independently treating motion as unrestricted.
+The much larger current `follow_action_node.py` remains outside this selected public snapshot, so the repository does **not** claim to contain the complete current FOLLOW implementation.
 
-### Batch 4 — INTERACT / voice runtime
+### AUTO
 
-Planned publication focus:
+Now public:
 
-- on-demand voice runtime management
-- voice input / command mapping source where publication review allows it
-- safe short-action path
-- package metadata and runtime configuration
+- `auto_manager_node.py`
+- `auto_supervisor_node.py`
+- current AUTO/FOLLOW permission-oriented safety supervision
 
-Why this matters: INTERACT demonstrates a resource-aware voice design where the full audio stack is not required to run continuously at boot. Basic `STOP`, `STAND_UP` and `SIT_DOWN` behavior has been verified on the real robot.
+### Mode management
 
-### Later — X3-side project-specific integration
+Now public:
 
-Where licensing and ownership boundaries allow, later public material can cover project-specific X3-side integration such as:
+- current `voice_runtime_manager_node.py`
+- mode-manager package metadata
+
+The large current central `mode_manager_node.py` remains outside this selected public snapshot.
+
+### INTERACT / voice
+
+Now public:
+
+- current `voice_command_node.py`
+- current on-demand voice runtime manager
+- package metadata
+
+The active workspace contains additional INTERACT source such as `safe_voice_pose_node.py` and `voice_input_node.py`; those larger files are not part of this selected public publication.
+
+## Publication pause after this integration batch
+
+This repository now exposes enough current real ROS 2 implementation to show the architecture and development direction without pretending that the entire live workspace is a stable release.
+
+The next **large source expansion is intentionally deferred** until DIABLO reaches a later stable, real-world in-use state. At that point the project can prepare a cleaner release-oriented source set, complete licensing review and repeatable deployment/validation documentation.
+
+Smaller documentation corrections, verified status updates and real-hardware media can still be added while development continues.
+
+## Later — X3-side project-specific integration
+
+Where licensing and ownership boundaries allow, a later release can cover project-specific X3-side integration such as:
 
 - high-level motion-request bridge integration
 - robot-side launch/runtime structure
@@ -85,13 +108,13 @@ Every source batch is reviewed before it reaches the public repository. The revi
 
 ## Historical snapshots versus current runtime
 
-A published snapshot is valuable even when the live robot has already evolved beyond it. Snapshot code is kept as technical history; current behavior and verification status are documented separately under [`../../docs/`](../../docs/).
+A published snapshot remains useful even when the live robot evolves beyond it. Snapshot code is kept as technical history; current behavior and verification status are documented separately under [`../../docs/`](../../docs/).
 
 The repository will not silently rewrite old source to make it look newer than it is.
 
-## Goal
+## Long-term goal
 
-The long-term goal is to make enough of the real project public that another robotics developer can understand:
+The public source should make it possible to understand the real control direction:
 
 ```text
 sensor / user intent
@@ -112,4 +135,4 @@ X3 motion bridge
 DIABLO controller / physical robot
 ```
 
-A stable release will be identified separately when the project reaches repeatable full-system validation.
+A stable release will be identified separately when the project reaches repeatable full-system validation and real-world use.
