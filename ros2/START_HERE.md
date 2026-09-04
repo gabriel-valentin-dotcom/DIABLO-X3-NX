@@ -8,11 +8,13 @@
 
 Start with these links:
 
-1. [`development_workspace/`](development_workspace/) — reviewed source copied from the real NX `diablo_ws/src` workspace.
-2. [`development_workspace/src/diablo_safety/diablo_safety/realsense_safety_node.py`](development_workspace/src/diablo_safety/diablo_safety/realsense_safety_node.py) — a compact example of RealSense depth data being turned into ROS 2 safety state.
-3. [`development_workspace/src/diablo_tracker/diablo_tracker/tracker_node.py`](development_workspace/src/diablo_tracker/diablo_tracker/tracker_node.py) — experimental UWB serial integration with stale-data handling and ROS 2 status/distance output.
-4. [`development_workspace/src/diablo_nx_bringup/launch/diablo_nx_base.launch.py`](development_workspace/src/diablo_nx_bringup/launch/diablo_nx_base.launch.py) — part of the NX bringup structure.
-5. [`../docs/ros2/SAFETY_AND_MOTION_FLOW.md`](../docs/ros2/SAFETY_AND_MOTION_FLOW.md) — how high-level behavior is kept behind safety and motion-request layers.
+1. [`development_workspace/CURRENT_SOURCE_2026-09-04.md`](development_workspace/CURRENT_SOURCE_2026-09-04.md) — what was reviewed from the current NX `diablo_ws/src` archive and what was deliberately excluded.
+2. [`development_workspace/src/diablo_camera/diablo_camera/vision_track_node.py`](development_workspace/src/diablo_camera/diablo_camera/vision_track_node.py) — current target/depth/floor processing from the real robot workspace.
+3. [`development_workspace/src/diablo_camera/diablo_camera/follow_manager_node.py`](development_workspace/src/diablo_camera/diablo_camera/follow_manager_node.py) — current FOLLOW arm/start/dependency state handling.
+4. [`development_workspace/src/diablo_camera/diablo_camera/auto_supervisor_node.py`](development_workspace/src/diablo_camera/diablo_camera/auto_supervisor_node.py) — current permission/safety supervision for AUTO and FOLLOW.
+5. [`development_workspace/src/diablo_voice_command/diablo_voice_command/voice_command_node.py`](development_workspace/src/diablo_voice_command/diablo_voice_command/voice_command_node.py) — current INTERACT wakeword and German intent mapping.
+6. [`development_workspace/src/diablo_mode_manager/diablo_mode_manager/voice_runtime_manager_node.py`](development_workspace/src/diablo_mode_manager/diablo_mode_manager/voice_runtime_manager_node.py) — current on-demand voice-runtime ownership and readiness checks.
+7. [`../docs/ros2/SAFETY_AND_MOTION_FLOW.md`](../docs/ros2/SAFETY_AND_MOTION_FLOW.md) — how high-level behavior is kept behind safety and motion-request layers.
 
 ## What makes this ROS 2 project different
 
@@ -20,25 +22,39 @@ DIABLO X3-NX is not a simulation-only repository. It is a two-computer ROS 2 sys
 
 - **RDK X3** stays close to the robot controller, LiDAR, touch UI and motion bridge.
 - **Jetson Xavier NX** handles higher-level perception, camera, FOLLOW/AUTO logic, interaction and supervision.
-- ROS 2 connects the layers while motion is intentionally separated from higher-level behavior through explicit request and safety paths.
+- ROS 2 connects the layers while motion is intentionally separated from higher-level behavior through explicit request, permission and safety paths.
 
 See [`../docs/ros2/X3_NX_ROLES.md`](../docs/ros2/X3_NX_ROLES.md) and [`../docs/ros2/NODES_AND_SERVICES.md`](../docs/ros2/NODES_AND_SERVICES.md).
 
-## Source available now
+## Public real-source snapshots
 
-The first reviewed source publication contains three real packages:
+### Foundation snapshot — 2026-08-19
+
+The first reviewed source publication preserved three real NX packages:
 
 | Package | What to look at | Publication state |
 |---|---|---|
-| `diablo_safety` | RealSense safety state + system-state logic | published source snapshot |
-| `diablo_tracker` | UWB serial distance/tracker experiment | published source snapshot |
-| `diablo_nx_bringup` | NX ROS 2 bringup structure | published source snapshot |
+| `diablo_safety` | RealSense safety state + system-state logic | historical source snapshot |
+| `diablo_tracker` | UWB serial distance/tracker experiment | historical source snapshot |
+| `diablo_nx_bringup` | NX ROS 2 bringup structure | historical source snapshot |
 
-The snapshot is dated **2026-08-19**. It is intentionally preserved as development history, so some names or interfaces inside that snapshot may differ from the newest runtime documentation.
+### Current integration selection — 2026-09-04
 
-## Important active areas not yet included as source
+A newer real `diablo_ws/src` archive was reviewed and selected current source was added for:
 
-The live project also contains larger connected areas for camera/perception, FOLLOW, AUTO, mode management and INTERACT/voice. Their behavior is already documented in the repository, but current source files will only be added after the same publication review used for Batch 1.
+- Camera / RealSense runtime
+- perception and vision tracking
+- FOLLOW manager state/dependency logic
+- AUTO manager and supervisor
+- LiDAR / safety bubble / motor-stall protection
+- INTERACT voice-command mapping
+- on-demand voice runtime management
+
+Browse [`development_workspace/src/diablo_camera/`](development_workspace/src/diablo_camera/), [`development_workspace/src/diablo_mode_manager/`](development_workspace/src/diablo_mode_manager/) and [`development_workspace/src/diablo_voice_command/`](development_workspace/src/diablo_voice_command/).
+
+## Important publication boundary
+
+This is a **selected real-source publication**, not a dump of the complete live workspace. Large current files such as the full FOLLOW action implementation, central mode manager, safe voice pose and voice input remain outside this public selection. Upstream RealSense/SLLIDAR repositories, backups, generated files and private deployment details are also excluded.
 
 See [`development_workspace/SOURCE_PUBLICATION_ROADMAP.md`](development_workspace/SOURCE_PUBLICATION_ROADMAP.md).
 
@@ -51,8 +67,8 @@ See [`development_workspace/SOURCE_PUBLICATION_ROADMAP.md`](development_workspac
 
 Current component status: [`../docs/ros2/PACKAGE_STATUS.md`](../docs/ros2/PACKAGE_STATUS.md).
 
-## Why the repository does not simply dump the entire workspace
+## Publication direction
 
-The active workspace also contains build output, backups, machine-local deployment details and third-party/vendor packages. Public batches are reviewed so that the repository can show the real project without publishing credentials, private host information, temporary diagnostics or source that belongs upstream.
+After the 2026-09-04 integration-source selection, larger source expansion is intentionally paused while DIABLO continues toward stable real-world use. A future stable release will be prepared separately with stronger deployment, licensing and repeatable validation documentation.
 
-The goal is simple: **real code, real hardware, clear status, no fake completeness.**
+The goal remains simple: **real code, real hardware, clear status, no fake completeness.**
