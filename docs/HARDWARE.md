@@ -118,6 +118,12 @@ The next DIABLO battery generation is based on:
 
 ![DIABLO Battery V2 — components ready for the build](../media/images/battery/diablo_battery_v2_build_begins.jpg)
 
+### AutoSwap Dock V1 concept
+
+The following image documents the current concept for a future DIABLO battery dock. The concept supports two operating ideas: automatic battery replacement and docking for charging. It is a design concept under active development and is not yet presented as a completed or validated subsystem.
+
+![DIABLO AutoSwap Dock V1 concept](../media/images/battery/diablo_autoswap_dock_v1.jpg)
+
 The mechanical battery design must remain inside the available DIABLO battery space.
 
 Specifications may still change as the pack is designed, assembled and tested on the real robot.
