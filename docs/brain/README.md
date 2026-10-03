@@ -6,7 +6,7 @@
 
 DIABLO_Brain is the experimental high-level intelligence architecture for DIABLO.
 
-The goal is not to place a generic chatbot next to the robot. The goal is to give DIABLO a persistent identity, personality, memory, self-model and perception layer that can use the robot's real state and sensors.
+The goal is not to place a generic chatbot next to the robot. The goal is to give DIABLO a persistent identity, personality, memory, self-model, perception and self-diagnostics layer that can use the robot's real state and sensors.
 
 **Core principle:** DIABLO remains DIABLO. External AI systems may help DIABLO, but they are not DIABLO's identity.
 
@@ -19,7 +19,8 @@ The goal is not to place a generic chatbot next to the robot. The goal is to giv
 | Memory | V0.1 | Defined |
 | Self Model | V0.1 | Defined |
 | Perception | V0.1 | Defined |
-| Diagnostics | V0.1 | Next design step |
+| Diagnostics | V0.1 | Defined |
+| INTERACT | V0.1 | Next design step |
 
 ## Implementation status
 
@@ -42,7 +43,8 @@ PERSONALITY    How do I behave?
 MEMORY         What do I remember?
 SELF MODEL     What belongs to me and what can I do?
 PERCEPTION     What do I perceive right now?
-DIAGNOSTICS    How do I investigate my own problems?   [next]
+DIAGNOSTICS    How do I investigate my own problems?
+INTERACT       How do people naturally communicate with me?   [next]
 ```
 
 INTERACT is intended to become the personal AI/conversation interface for Brain. AUTO remains a separate autonomous physical operating mode.
@@ -58,6 +60,7 @@ DIABLO_Brain must not bypass the existing motion safety and permission layers. P
 - [Memory V0.1](MEMORY_V0.1.md)
 - [Self Model V0.1](SELF_MODEL_V0.1.md)
 - [Perception V0.1](PERCEPTION_V0.1.md)
+- [Diagnostics V0.1](DIAGNOSTICS_V0.1.md)
 
 ## Development note
 
